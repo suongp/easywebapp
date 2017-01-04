@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="app.css" rel="stylesheet" type="text/css">
+    <title>Introduction to Web application development with Ruby</title>
+  <head>
+  <body>
+    <header>
+      <h1>Understanding URL, REST, ERB and Sinatra<h1>
+    </header>
+    <div class="content">
+    <nav>
+      <p>Do you want to learn how to make Web applications with Ruby quick and easy? <i>...It's much easier than you think!</i></p>
+      <p>Here is the list of what you need to learn to get started:</p>
+        <ol>
+        <li><h3>Understanding URL</h3></li>
+        <li><h3>What is REST?</h3></li>
+        <li><h3>Sinatra Routes</h3></li>
+        <li><h3>ERB</h3></li>
+      <ol>
+    </nav>
+
+    <div class=url>
+      <h2>Understanding URL</h2>
+      <p>URL means Uniform Resource Locater. Every document on the Web has a unique address. A URL is made of up several parts, each of which offers information to the web browser to help find the page.
+      There are three key parts: the scheme, the host address, and the file path.</p>
+
+      <h3>Protocol</h3>
+      <p>There a few types of protocol that are often used. The most common is Hypertext Transfer Protocol(http://).</p>
+      <table>
+        <tr>
+          <th>Type of protocol</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>http://</td>
+          <td>Hypertext Transfer Protocol, is used to request pages from
+            Web servers and send them back to browser.</td>
+      </tr>
+      <tr>
+        <td>https://</td>
+        <td>Hypertext Transfer Protocol Secure, encrypts the data sent between the browser and Web server using digital certificate.</td>
+      </tr>
+      <tr>
+        <td>ftp://</td>
+        <td>File Transfer Protocol, transfer files on the Web. FTP is often used protocol to transfer large files accross the Web and upload source files to your Web server.</td>
+      </tr>
+      <tr>
+        <td>file://</td>
+        <td>Used to indicate that the file is on the local hard disk or shared directory on a LAN.</td>
+      </tr>
+      <tr>
+    </table>
+    <h3>Host Address</h3>
+    <p>The host address is where a website can be found, either the IP address (four sets of numbers between 0 and 258, for example 68.178.157.132 ) or more commonly the domain name for example www.xxxx.com.</p>
+  </div>
+
+  <div class="rest">
+    <h2>What is REST?</h2>
+    <p>REST (Representational State Transfer) is an architectural style for designing application network easily. It relies on a stateless, client-server, cacheable communications protocol.
+    REST uses HTTP requests to post data (create and/or update), read data, and delete data. Thus, REST uses HTTP for all four CRUD (Create/Read/Update/Delete) operations.</p>
+  </div>
+  <div class="principles">
+    <h3>Principles of REST</h3>
+      <ul>
+        <li>
+          <p>
+            <b>Resources</b> expose easily understood directory structure URIs.</p>
+          </li>
+          <li>
+            <p><b>Representations</b> transfer JSON or XML to represent data objects and attributes.</p>
+          </li>
+          <li>
+            <p><b>Messages</b> use HTTP methods explicitly (for example, GET, POST, PUT, and DELETE).</p>
+          </li>
+          <li>
+            <p><b>Stateless</b> interactions store no client context on the server between requests. State dependencies limit and restrict scalability. The client holds session state.</p>
+          </li>
+      </ul>
+    </div>
+
+    <div class="methods">
+      <h3>HTTP Methods</h3>
+      <p><b>Here are the 4 most common methods to map CRUD (Create, Retrieve, Update, Delete) operations to HTTP requests:</b></p>
+      <p><b>GET:</b> Show or retrieve information. It can repeats many time with same parameters witth same result</p>
+      <p><b>POST:</b> Create new entity</p>
+      <p><b>PUT:</b> Update an existing entity</p>
+      <p><b>DELETE:</b> Request that a resource be removed</p>
+    </div>
+
+    <div class="status_code">
+      <h3>HTTPS Status code</h3>
+      <p><b>1xx</b> - Informational</p>
+      <p><b>2xx</b> - Success (most common 200)</p>
+      <p><b>3xx</b> - Redirection (most common 302)</p>
+      <p><b>4xx</b> - Client error (most common 404, not found)</p>
+      <p><b>5xx</b> - Server error</p>
+    </div>
+    <div class="sinatra">
+      <h2>Sinatra</h2>
+      <p> Sinatra is a free and open source software web application library and domain-specific language written in Ruby. It is an alternative to other Ruby web application frameworks such as Ruby on Rails. It is dependent on the Rack web server interface. When it comes to tapping into the power of an API, Sinatra has the upper hand. Because it’s simple and flexible.</p>
+      <p>Here is the link to <a href="http://www.sinatrarb.com/">Sinatra Documentation</a></p>
+    </div>
+    <div class="erb">
+      <h2>ERB</h2>
+      <p>ERB (Embedded RuBy) is a feature of Ruby that enables you to generate any kind of text, in any quantity, from templates. The templates themselves combine plain text with Ruby code for variable substitution and flow control, making them easy to write and maintain.
+      <p>Although ERB is most commonly seen generating Web pages, it is also used to produce XML documents, RSS feeds, source code, and other forms of structured text file. It can be extremely valuable when you need to create files which include many repetitions of a standard pattern, such as unit test suites.</p>
+
+      <p>The main component of ERB is a library which you can call within your Ruby applications and Rake tasks. This library accepts any string as a template, and imposes no limitations on the source of the template. You may define a template entirely within your code, or store it in an external location and load it as required.</p>
+
+      <p>Ruby’s ERB template files, are files with the “.erb”. These files are basically text files with a bunch of ruby tags embeded in them. There are a few different types of these ruby tags:</p>
+       <table>
+        <tr>
+          <th>Tag type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>&lt;&percnt; ruby code &percnt;&gt;</td>
+          <td>This exexutes the ruby code. Noth this has two optional variations</td>
+        </tr>
+        <tr>
+          <td>&lt;&percnt;&equals; ruby code &percnt;></td>
+          <td>This processes some ruby code and returns a string output.</td>
+      </tr>
+      <tr>
+        <td>&lt;&percnt;&num; comment &percnt;&gt;</td>
+        <td>This is a ruby comment, and it's easy to disable a ruby code tag for testing purposes.</td>
+      </tr>
+      <tr>
+        <td>&percnt; single line of ruby code</td>
+        <td>If you want to only embed a really short ruby code, then you can use this option for this.</td>
+      </tr>
+      <tr>
+    </table>
+    <p>Here is a link to: <a href="http://www.stuartellis.name/articles/erb/">ERB tutorial</a></p>
+    </div>
+  </div>
+  <footer>
+    <p>@Suong 2017</p>
+  </footer>
+  </body>
+</html>
