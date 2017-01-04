@@ -1,7 +1,10 @@
-# easywebapp
+# Easywebapp
 
 Introduction to Web application development with Ruby
--------------------------------------------------------
+
+https://suongp.github.io/easywebapp/
+
+*** *** *** *** *** *** *** *** *** *** *** ***
 
 This is a basic introduction and it covers what you will need to know before you start.
 
@@ -12,3 +15,5 @@ This is a basic introduction and it covers what you will need to know before you
 3. Sinatra Routes
 
 4. ERB
+
+
